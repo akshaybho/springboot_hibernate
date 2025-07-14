@@ -33,6 +33,10 @@ public class Student {
     @JoinColumn(name="studnet_id") //foreign key in course table
     private List<Course> courses = new ArrayList<>();
 
+    @ManyToOne
+    @JoinColumn(name="college_id") //foreign key in student table
+    private College college;
+
     @Override
     public String toString() {
         return "Student{id=" + id + ", name='" + name + "', age=" + age + '}';
